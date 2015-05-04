@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/app_background" tools:context=".HPTracker">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="200dp"
+            android:text="50"
+            android:id="@+id/player1HPsingle"
+            android:layout_gravity="center_horizontal|top" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/reset_buttonsingle"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="100dp"
+            android:background="#2593E5"/>
+
+        <NumberPicker
+            android:id="@+id/numberpicker1single"
+            android:layout_width="125dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="75dp"
+            android:theme="@style/AppBaseTheme"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/minus1_buttonsingle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/squareminus"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/plus1_buttonsingle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/squareplus"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</FrameLayout>

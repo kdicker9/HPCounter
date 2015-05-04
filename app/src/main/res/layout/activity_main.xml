@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="srt.com.starrealmstracker.MainActivity"
+    android:background="@color/app_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HP:"
+        android:id="@+id/max_hp_text"
+        android:textSize="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editMaxHP"
+        android:layout_alignBottom="@+id/max_hp_text"
+        android:layout_toRightOf="@+id/max_hp_text"
+        android:layout_toEndOf="@+id/max_hp_text"
+        android:theme="@style/AppBaseTheme"/>
+
+    <Button
+        android:id="@+id/one_player_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="One Player"
+        android:background="#2593E5"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/editMaxHP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"/>
+
+    <Button
+        android:id="@+id/two_player_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Two Players"
+        android:background="#2593E5"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/one_player_button"
+        android:layout_alignLeft="@+id/one_player_button"
+        android:layout_alignStart="@+id/one_player_button" />
+
+
+</RelativeLayout>

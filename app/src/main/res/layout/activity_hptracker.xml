@@ -1,0 +1,105 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/app_background" tools:context=".HPTracker">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="50"
+            android:textSize="200dp"
+            android:id="@+id/player2HP"
+            android:rotation="180"
+            android:layout_gravity="top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="200dp"
+            android:text="50"
+            android:id="@+id/player1HP"
+            android:layout_gravity="bottom" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/reset_button"
+            android:layout_gravity="center"
+            android:background="#2593E5"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="right|top">
+
+        <ImageButton
+            android:id="@+id/plus2_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/squareplus"
+            android:layout_gravity="top|left"/>
+        <ImageButton
+            android:id="@+id/minus2_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/squareminus"
+            android:layout_gravity="top|right"/>
+        <NumberPicker
+            android:id="@+id/numberpicker2"
+            android:layout_width="125dp"
+            android:layout_height="200dp"
+            android:rotation="180"
+            android:layout_gravity="bottom"
+            android:theme="@style/AppBaseTheme"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="right|bottom">
+
+        <NumberPicker
+            android:id="@+id/numberpicker1"
+            android:layout_width="125dp"
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            android:theme="@style/AppBaseTheme"
+            />
+        <ImageButton
+            android:id="@+id/plus1_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/squareplus"
+            android:layout_gravity="bottom|right"/>
+        <ImageButton
+            android:id="@+id/minus1_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/squareminus"
+            android:layout_gravity="bottom|left"/>
+
+    </FrameLayout>
+
+</FrameLayout>
